@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- ===== SPLASH SCREEN ===== -->
   <div id="splash">
     <div class="splash-content">
       <div class="splash-logo">
@@ -42,9 +41,7 @@
     </div>
   </div>
 
-  <!-- ===== MAIN APP ===== -->
   <div id="app">
-    <!-- Header -->
     <header class="header">
       <div class="header-brand">
         <div class="header-logo">
@@ -63,11 +60,8 @@
       </div>
     </header>
 
-    <!-- Main Content Area -->
     <main class="main">
-      <!-- HOME PAGE -->
       <section id="page-home" class="page active">
-        <!-- Single Barcode Input -->
         <div class="card">
           <div class="card-header">
             <span class="card-icon">📝</span>
@@ -81,7 +75,6 @@
           </div>
         </div>
 
-        <!-- Bulk Paste -->
         <div class="card">
           <div class="card-header clickable" onclick="toggleBulk()">
             <span class="card-icon">📋</span>
@@ -107,7 +100,6 @@ Each line = one GS1 barcode"></textarea>
           </div>
         </div>
 
-        <!-- Scanner -->
         <div class="card">
           <div class="card-header">
             <span class="card-icon">📷</span>
@@ -123,7 +115,6 @@ Each line = one GS1 barcode"></textarea>
           </div>
         </div>
 
-        <!-- Stats -->
         <div class="stats-row">
           <div class="stat-card expired" onclick="filterBy('expired')">
             <span class="stat-value" id="statExpired">0</span>
@@ -139,7 +130,6 @@ Each line = one GS1 barcode"></textarea>
           </div>
         </div>
 
-        <!-- Recent Scans -->
         <div class="section-header">
           <h2>Recent Scans</h2>
           <button class="link-btn" onclick="showPage('history')">View All →</button>
@@ -147,7 +137,6 @@ Each line = one GS1 barcode"></textarea>
         <div id="recentList" class="items-list"></div>
       </section>
 
-      <!-- HISTORY PAGE -->
       <section id="page-history" class="page">
         <div class="search-box">
           <span class="search-icon">🔍</span>
@@ -162,7 +151,6 @@ Each line = one GS1 barcode"></textarea>
         <div id="historyList" class="items-list"></div>
       </section>
 
-      <!-- MASTER DATA PAGE -->
       <section id="page-master" class="page">
         <div class="master-header">
           <div class="master-count" id="masterCount">0</div>
@@ -228,7 +216,6 @@ Each line = one GS1 barcode"></textarea>
         </div>
       </section>
 
-      <!-- SETTINGS PAGE -->
       <section id="page-settings" class="page">
         <div class="card">
           <div class="card-header">
@@ -300,7 +287,6 @@ Each line = one GS1 barcode"></textarea>
       </section>
     </main>
 
-    <!-- Bottom Navigation -->
     <nav class="bottom-nav">
       <button class="nav-btn active" data-page="home">
         <span class="nav-icon">🏠</span>
@@ -321,7 +307,6 @@ Each line = one GS1 barcode"></textarea>
     </nav>
   </div>
 
-  <!-- Side Menu -->
   <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()"></div>
   <div id="sideMenu" class="side-menu">
     <div class="menu-header">
@@ -348,7 +333,6 @@ Each line = one GS1 barcode"></textarea>
     </div>
   </div>
 
-  <!-- Edit Modal -->
   <div id="editModal" class="modal-overlay">
     <div class="modal">
       <div class="modal-header">
@@ -403,16 +387,13 @@ Each line = one GS1 barcode"></textarea>
     </div>
   </div>
 
-  <!-- Toast Container -->
   <div id="toasts" class="toast-container"></div>
 
-  <!-- Loading Overlay -->
   <div id="loading" class="loading-overlay">
     <div class="loading-spinner"></div>
     <p id="loadingText">Loading...</p>
   </div>
 
   <script src="app.js"></script>
-  <script src="master-data.js"></script>
 </body>
 </html>
